@@ -5,6 +5,7 @@ def main():
     contact_list = get_contact_list
 
     while True:
+
         action = view_actions.input_message('Do you want to *get*, *add* ot *del* contact? Or *end* to finish: ')
 
         if action == 'get':
