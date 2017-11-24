@@ -2,8 +2,8 @@ import socket
 
 
 s = socket.socket()
-print("Server starts..")
-s.bind(('127.0.0.1', 5001))
+s.bind(('127.0.0.1', 5002))
+print("Server starts.. Port: {}".format(s.getsockname()[1]))
 s.listen(5)
 c, a = s.accept()
 

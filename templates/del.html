@@ -1,0 +1,16 @@
+{% extends "action.html" %}
+{% block delContact %}
+
+<form method="post">
+    {% for contact in all_contacts %}
+    <div>
+        <label>
+            <input type="radio" name="desc" title="Contact" value="{{ contact.name }}"> {{ contact.name }}
+        </label>
+
+    </div>
+    {% endfor %}
+    <p><input type="submit" value="Remove it!!!"/></p>
+</form>
+
+{% endblock %}

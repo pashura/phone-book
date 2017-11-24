@@ -1,0 +1,8 @@
+{% extends "action.html" %}
+{% block addContact %}
+<form method="post">
+    <p><input type="text" name="name" placeholder="Contact name" required/></p>
+    <p><input type="text" name="number" placeholder="Phone Number" required/></p>
+    <p><input type="submit" value="Add"/></p>
+</form>
+{% endblock %}

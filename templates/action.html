@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Book</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/style.css" media="screen" />
+</head>
+<body>
+    <h1 style="text-align: center">Welcome to Phone Book</h1>
+    <p align="center" style="font-family: Helvetica">{{ message }}</p>
+
+
+
+    <table border="0" align="center">
+        <tr>
+            <td>
+                    <a href="/get" class="button-link"> Get contact </a>
+            </td>
+            <td>
+                    <p><a href="/add" class="button-link"> Add contact </a></p>
+            </td>
+            <td>
+                    <p><a href="/upd" class="button-link"> Update contact </a></p>
+            </td>
+            <td>
+                    <p><a href="/del" class="button-link"> Delete contact </a></p>
+            </td>
+        </tr>
+    </table>
+
+    <div align="center">
+        {% block getContact %}
+        {% endblock %}
+        {% block addContact  %}
+        {% endblock %}
+        {% block updContact %}
+        {% endblock %}
+        {% block delContact%}
+        {% endblock %}
+    </div>
+
+    <div align="center">
+        <span class="span2" tabindex="0">Show All Contacts</span>
+        <span class="span3" tabindex="0">Hide All Contacts</span>
+        <div class="alert" >
+            {% for contact in all_contacts %}
+                {{ contact.name }}: {{ contact.phone_number}} <br />
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
